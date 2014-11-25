@@ -1,3 +1,11 @@
+/*
+ * This file is part of the TREZOR project.
+ *
+ * Copyright (C) 2014 SatoshiLabs
+ *
+ * Licensed under Microsoft Reference Source License (Ms-RSL)
+ */
+
 #ifdef _MSC_VER // trezor-crypto gets compiled as C++ on MSVC
 extern "C++" {
 #else

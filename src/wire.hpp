@@ -1,3 +1,11 @@
+/*
+ * This file is part of the TREZOR project.
+ *
+ * Copyright (C) 2014 SatoshiLabs
+ *
+ * Licensed under Microsoft Reference Source License (Ms-RSL)
+ */
+
 #include <hidapi.h>
 
 #ifdef _WIN32

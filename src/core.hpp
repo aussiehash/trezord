@@ -1,3 +1,11 @@
+/*
+ * This file is part of the TREZOR project.
+ *
+ * Copyright (C) 2014 SatoshiLabs
+ *
+ * Licensed under Microsoft Reference Source License (Ms-RSL)
+ */
+
 #include "protobuf/json_codec.hpp"
 #include "protobuf/wire_codec.hpp"
 #include "config/config.pb.h"

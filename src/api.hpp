@@ -1,3 +1,11 @@
+/*
+ * This file is part of the TREZOR project.
+ *
+ * Copyright (C) 2014 SatoshiLabs
+ *
+ * Licensed under Microsoft Reference Source License (Ms-RSL)
+ */
+
 #include <boost/network/include/http/server.hpp>
 #include <boost/regex.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
