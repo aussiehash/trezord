@@ -190,7 +190,11 @@ struct server
             MHD_OPTION_EXTERNAL_LOGGER, &server::log_callback, this,
             MHD_OPTION_END);
 
-        if (!daemon) {
+        if (daemon) {
+            CLOG(INFO, "http.server")
+                << "listening at https://" << address << ":" << port;
+        }
+        else {
             throw std::runtime_error{"failed to start server"};
         }
     }
@@ -237,11 +241,9 @@ private:
                 return MHD_YES;
             }
 
-            // find matching request handler
+            CLOG(INFO, "http.server") << "<- " << method << " " << url;
 
-            CLOG(INFO, "http.server")
-                << "<- " << method
-                << " " << url;
+            // find matching request handler
 
             request_handler handler = nullptr;
 
@@ -287,7 +289,7 @@ private:
     void
     panic_callback(void *cls, char const *file, unsigned int line, char const *reason)
     {
-        // TODO
+        CLOG(FATAL, "http.server") << file << ":" << line << ": " << reason;
     }
 
     static
